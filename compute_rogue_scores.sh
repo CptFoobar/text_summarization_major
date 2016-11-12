@@ -12,3 +12,5 @@ do
     cd ..
     python rogue_one.py --gold data/summaries_keywords --test $algorithm/results
 done
+echo "Done\nComputing ROGUE-1 Scores for human generated summaries..."
+python rogue_one.py --human

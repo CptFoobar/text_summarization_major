@@ -2,6 +2,11 @@ import os
 import argparse
 
 def main(args):
+    if (args.human):
+        from rogue_one_human import compute_human_summaries_rogue
+        compute_human_summaries_rogue()
+        return
+
     gold_files_path = os.path.abspath(args.gold)
     test_files_path = os.path.abspath(args.test)
     if (not os.path.isdir(gold_files_path) or not os.path.isdir(test_files_path)):
@@ -32,6 +37,8 @@ if __name__ == "__main__":
 
     # option for specifying path to test dataset
     parser.add_argument("-t", "--test", type=str, help="Specify path to gold dataset (file path)")
+
+    parser.add_argument("-m", "--human", action="store_true", help="Compute ROGUE-1 score for human generated summaries")
 
     args = parser.parse_args()
 

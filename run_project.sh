@@ -17,4 +17,5 @@ else
     cd ..
     echo "Done\nComputing ROGUE-1 Scores for TextRank, LexRank, LSA..."
     sh +x compute_rogue_scores.sh
+    echo "Done"
 fi

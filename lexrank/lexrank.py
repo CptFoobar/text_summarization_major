@@ -12,7 +12,7 @@ import os
 
 def main():
     LANGUAGE = "english"
-    SENTENCES_COUNT = 10
+    SENTENCES_COUNT = 2
     stop = set(stopwords.words('english'))
 
     #retrieve each of the articles
