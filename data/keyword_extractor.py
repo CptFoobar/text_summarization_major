@@ -23,10 +23,10 @@ def main():
             sk.extend(summary_tokens)
 
         # TODO: Check if setting threshold count improves quality of keywords extracted
-        #summary_tokens = {k for (k,v) in dict(summary_tokens).items() if v > 1}
-        #summary_tokens_dict = dict(summary_tokens)
+        summary_tokens = [k for (k,v) in summary_keywords.items() if v > 1]
+        # summary_tokens_dict = dict(summary_tokens)
         with open(join("summaries_keywords", s_dir + ".keywords.gold"), 'w') as keywords_file:
-            for token, val in summary_keywords.items():
+            for token in summary_tokens:
                 keywords_file.write(token + "\n")
 
 if __name__ == "__main__":
