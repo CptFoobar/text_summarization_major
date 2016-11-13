@@ -20,7 +20,7 @@ For our experiments, the Opinosis dataset was used. It can be obtained [here](ht
 }
 ```
 
-##### Performance Metric
+#### Performance Metric
 To compare the relative performance of the algorithms, a simple implementation of ROGUE-1 metric in python was used.
 
 #### Replicating project results
@@ -32,6 +32,7 @@ To imitate the results of our project, one may do the following:
    ```
    This script will clean the dataset, extract keywords, run the algorithms on the dataset, and print their respective running times and ROGUE-1 scores.
    - Individual performances of each of the algorithms can be computed by simply first running the `$algorithm/$algorithm.py` script, followed by running the `rogue_one` script with:
+
     ```bash
     $ python rogue_one.py --gold data/summaries_keywords --test $algorithm/results
     ```
